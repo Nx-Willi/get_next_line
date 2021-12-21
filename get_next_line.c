@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 09:32:16 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/12/12 17:23:14 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/21 09:02:37 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,14 +93,14 @@ char	*get_read(int fd, char *buffer)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*buffer[1025];
+	static char	*buffer;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (read(fd, "", 0) == -1)
 		return (NULL);
-	buffer[fd] = get_read(fd, buffer[fd]);
-	line = get_line(buffer[fd]);
-	buffer[fd] = get_rest(buffer[fd]);
+	buffer = get_read(fd, buffer);
+	line = get_line(buffer);
+	buffer = get_rest(buffer);
 	return (line);
 }
