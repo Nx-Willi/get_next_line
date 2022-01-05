@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 09:32:55 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/12/12 17:16:35 by wdebotte         ###   ########.fr       */
+/*   Updated: 2022/01/05 16:54:21 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,11 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		s1 = malloc(sizeof(char));
+		if (s1 == NULL)
+			return (NULL);
 		s1[0] = '\0';
 	}
-	if (s1 == NULL || s2 == NULL)
+	if (s2 == NULL)
 		return (NULL);
 	buffer = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (buffer == NULL)
