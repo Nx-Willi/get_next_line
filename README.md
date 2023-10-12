@@ -16,7 +16,3 @@ The given a.out will read in **testX** files in **tests** folder
 To test this project the following tester were usefull:  
 - https://github.com/Tripouille/gnlTester  
 It help me a lot to understand treaky behaviors.
-
-## Score
-
-[![wdebotte's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cl2zu1sil002509mf9zd91hy6/project/2431885)](https://github.com/JaeSeoKim/badge42)
