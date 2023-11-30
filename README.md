@@ -1,4 +1,4 @@
-# 🖱 42Paris Project | ft_printf
+# 🖱 42Paris Project | get_next_line
 
 ## Objectives
 
